@@ -1,17 +1,57 @@
 package com.pluralsight.finance;
 
+import com.pluralsight.Valuable;
+
 import java.util.Scanner;
 
-public class BankAccount {
-    String name;
-    String accountNumber;
+public class BankAccount implements Valuable {
+    private String name;
+    private int accountNumber;
+    private double balance;
 
-    double Balance;
+    public BankAccount(String name, int accountNumber, double balance) {
+        this.name = name;
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+    }
 
-    private void addDeposit() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter deposit amount: ");
-        double Balance = scanner.nextDouble();
+    public String getName() {
+        return name;
+    }
 
-}}
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void setAccountNumber(int accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    public void deposit(double amount) {
+
+    }
+
+    public void withdraw(double amount) {
+
+    }
+
+    @Override
+    public double getValue() {
+        return Valuable.super.getValue();
+    }
+}
+
+
 
